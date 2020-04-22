@@ -1,0 +1,34 @@
+{
+    "KVM": [
+        {
+            "mapName": "xxx",
+            "encrypted": true,
+            "environment": "eee"
+        }
+    ],
+
+    "KVMentry": [
+        {
+            "mapName": "xxx",
+            "entryName": "entryx", 
+            "entryValue":"valuex",
+            "environment": "eee"
+        }
+    ],
+
+    "Cache": [
+        {
+            "cacheName": "ccc",
+            "environment": "eee"
+        }
+    ],
+
+    "TargetServer": [
+        {
+            "environment": "eee",
+            "targetServerName": "ttt",
+            "targetHost": "hhh",
+            "targetPort": 443          
+        }  
+    ]
+}
