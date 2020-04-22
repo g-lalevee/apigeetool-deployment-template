@@ -19,7 +19,7 @@ jobs:
     
     - name: Deployment
       id: deployment
-      uses: g-lalevee/apigeetool-deployment-action@v7.4
+      uses: g-lalevee/apigeetool-deployment-action@v1.0
       with:
         APIGEE_USERNAME: ${{ secrets.APIGEE_ID }}
         APIGEE_PASSWORD: ${{ secrets.APIGEE_PWD }}  
