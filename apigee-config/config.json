@@ -1,34 +1,72 @@
 {
     "KVM": [
         {
-            "mapName": "xxx",
+            "mapName": "name",
             "encrypted": true,
-            "environment": "eee"
+            "environment": "env"
         }
     ],
 
     "KVMentry": [
         {
-            "mapName": "xxx",
-            "entryName": "entryx", 
-            "entryValue":"valuex",
-            "environment": "eee"
+            "mapName": "name",
+            "entryName": "entry", 
+            "entryValue":"value",
+            "environment": "env"
         }
     ],
 
     "Cache": [
         {
-            "cacheName": "ccc",
-            "environment": "eee"
+            "cacheName": "name",
+            "environment": "env"
         }
     ],
 
     "TargetServer": [
         {
-            "environment": "eee",
-            "targetServerName": "ttt",
-            "targetHost": "hhh",
+            "environment": "env",
+            "targetServerName": "name",
+            "targetHost": "host",
             "targetPort": 443          
         }  
+    ],
+    "Product": [
+        {
+            "productName": "product",
+            "productDesc": "desc",
+            "environments": "env1, env2",
+            "scopes": "",
+            "proxies": "proxy1,proxy2",
+            "quota": "1", 
+            "quotaInterval": "1", 
+            "quotaTimeUnit": "minute"
+        }
+    ],
+    "Developer": [
+        {
+            "attributes": [{"name":"Attribute", "value":"Value"}],
+            "userName": "name",
+            "email": "name@example.com",
+            "firstName": "firstname",
+            "lastName":  "lastName"
+        }
+    ],
+    "Application": [
+        {
+            "apiProducts": "product1, product2",
+            "callback": "",
+            "email": "name@example.com",
+            "name": "appName"
+        }
+    ],
+    "ApplicationKey": [
+        {
+            "apiProducts": "product1, product2",
+            "appName": "appName",
+            "developerId": "name@example.com",
+            "key": "key",
+            "secret": "secret"
+        }
     ]
 }
