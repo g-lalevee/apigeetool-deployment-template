@@ -34,7 +34,7 @@ jobs:
       uses: g-lalevee/newman-test-action@master
       with:
         collection: test/postman_collection.json
-        environment: test/environment.json
+        environment: test/postman_environment.json
         iterationCount: 2
         workingDir: test
 
