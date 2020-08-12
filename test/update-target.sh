@@ -11,10 +11,9 @@ echo ""
 
 if [ ! -z "$APIGEE_ORGANIZATION" ]
   then
-    sed -i "s/<organization>/$APIGEE_ORGANIZATION/g" ./test/postman_environment.json
     if [ ! -z "$APIGEE_ENV" ]
     then
-        sed -i "s/<environment>/$APIGEE_ENV/g" ./test/postman_environment.json
+        sed -i "s/<hostname>/$APIGEE_ORGANIZATION-$APIGEE_ENV.apigee.net/g" ./test/postman_environment.json
     else
         echo "Apigee Environment name is missing!"
         echo "Please update and re-run the script."

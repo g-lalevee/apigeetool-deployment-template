@@ -1,6 +1,25 @@
 {
 	"info": {},
-	"item": [],
+	"item": [
+		{
+			"name": "name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOSTNAME}}/path",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOSTNAME}}"
+					],
+					"path": [
+						"path"
+					],
+					"query": []
+				}
+			},
+			"response": []
+		}],
 	"event": [],
 	"protocolProfileBehavior": {}
 }
