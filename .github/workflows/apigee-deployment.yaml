@@ -7,6 +7,8 @@ name: apigee-deployment
 on:
   push:
     branches: [ master ]
+    paths-ignore:
+    - '**.md'
 
 jobs:
   apigee_deployment_job:
@@ -21,19 +23,25 @@ jobs:
       id: deployment
       uses: g-lalevee/apigeetool-deployment-action@master
       with:
-        APIGEE_USERNAME: ${{ secrets.APIGEE_ID }}
-        APIGEE_PASSWORD: ${{ secrets.APIGEE_PWD }}  
         APIGEETOOL_ERROR_STOP: false
+        APIGEE_USERNAME: ${{ secrets.APIGEE_ID }}
+        APIGEE_PASSWORD: ${{ secrets.APIGEE_PWD }}
           
     # Use the output from the `Deployment` step
     - name: Get the Apigeetool Return Code
       run: echo "Apigeetool ended with code ${{ steps.deployment.outputs.RC }}"
 
+    # Edit Newman environment file from .env file
+    # Newman environment file must contains <organization> and <environment> values 
+    # for Apigee target organization and environment keys
+    - name: Update Newman environment file
+      run: ./test/update-target.sh
+
     - name: Unit Test
       id: test
       uses: g-lalevee/newman-test-action@master
       with:
-        collection: test/postman_collection.json
+        collection: test/petstore.postman_collection.json
         environment: test/postman_environment.json
         iterationCount: 2
         workingDir: test
