@@ -32,8 +32,8 @@ jobs:
       run: echo "Apigeetool ended with code ${{ steps.deployment.outputs.RC }}"
 
     # Edit Newman environment file from .env file
-    # Newman environment file must contains <organization> and <environment> values 
-    # for Apigee target organization and environment keys
+    # Newman environment file must contains <hostname> value
+    # It will be replace by Apigee target hostname = organization-environment.apigee.net 
     - name: Update Newman environment file
       run: ./test/update-target.sh
 

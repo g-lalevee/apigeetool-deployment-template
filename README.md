@@ -19,8 +19,8 @@ Go through this checklist after creating your repository. It should only take a 
 
 - [ ] Update **.env** file with Apigee target organization and target environment names
 - [ ] Add **APIGEE_ID** and **APIGEE_PWD** secrets to you repository to store credentials used to connect to your target organization
-- [ ] Copy your Apigee proxies folders into **apigee-apiproxies** folder
-- [ ] Copy your Apigee shared flows folders into **apigee-sharedflows** folder
-- [ ] Update **apigee-config/config.json** file to describe Apigee configuration to be deployed (KVM, Cache, Target Server, Api Product, App. Developer, ...)
-- [ ] Copy your Postman Environment and Collection JSON files into **test** folder (keep same names or change GitHub workflow parameters)
+- [ ] Copy your Apigee proxies folders into **apigee-apiproxies** folder (see [README](./apigee-apiproxies/README.md))
+- [ ] Copy your Apigee shared flows folders into **apigee-sharedflows** folder (see [README](./apigee-sharedflows/README.md))
+- [ ] Update **apigee-config/config.json** file to describe Apigee configuration to be deployed (see [README](./apigee-config/README.md))
+- [ ] Copy your Postman Environment and Collection JSON files into **test** folder - keep same names or change GitHub workflow parameters (see [README](./test/README.md))
 - [ ] Manually go through and edit the README file. 
